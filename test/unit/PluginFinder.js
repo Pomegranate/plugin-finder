@@ -8,7 +8,7 @@
 "use strict";
 
 const tap = require('tap')
-const mocks = require('pom-test-stubs')
+const mocks = require('@pomegranate/test-utils')
 const PluginFinder = require('../../lib/PluginFinder')
 const path = require('path')
 const fs = require('fs')
