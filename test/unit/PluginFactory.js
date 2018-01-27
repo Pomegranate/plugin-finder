@@ -19,7 +19,7 @@ tap.test('Finding Framework Plugins.', (t) => {
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
   PluginFinder(mockedDependencies, frameworkInjector)
     .then((FoundPlugins) => {
-      t.equal(FoundPlugins.length, 1, 'Should find correct number of framework plugins.')
+      t.equal(FoundPlugins.length, 2, 'Should find correct number of framework plugins.')
       mockedApplication.reset()
       t.end()
     })

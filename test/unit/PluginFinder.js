@@ -19,7 +19,7 @@ tap.test('Finding Framework Plugins.', (t) => {
   let mockedApplication = mocks.registerMocks(mockDir, mockedDependencies)
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
   let FoundPlugins = PluginFinder(mockedDependencies, frameworkInjector)
-  t.equal(FoundPlugins.length, 1, 'Should find correct number of framework plugins.')
+  t.equal(FoundPlugins.length, 2, 'Should find correct number of framework plugins.')
 
   FoundPlugins.forEach((v,k) => {
     let mn = v.moduleName
@@ -37,11 +37,14 @@ tap.test('Finding internal Plugins', (t) => {
   let mockedApplication = mocks.registerMocks(mockDir, mockedDependencies)
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
   let FoundPlugins = PluginFinder(mockedDependencies, frameworkInjector)
-  t.equal(FoundPlugins.length, 2, 'Should find correct number of internal plugins.')
+  t.equal(FoundPlugins.length, 3, 'Should find correct number of internal plugins.')
 
   FoundPlugins
     .filter((i) => {
       return i.moduleName !== 'ApplicationEnvironment'
+    })
+    .filter((i) => {
+      return i.moduleName !== 'AddUtilities'
     })
     .forEach((v,k) => {
       let mn = v.moduleName
@@ -61,11 +64,14 @@ tap.test('Finding internal Plugins inside directory', (t) => {
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
   let FoundPlugins = PluginFinder(mockedDependencies, frameworkInjector)
 
-  t.equal(FoundPlugins.length, 3, 'Should find correct number of internal plugins.')
+  t.equal(FoundPlugins.length, 4, 'Should find correct number of internal plugins.')
 
   FoundPlugins
     .filter((i) => {
       return i.moduleName !== 'ApplicationEnvironment'
+    })
+    .filter((i) => {
+      return i.moduleName !== 'AddUtilities'
     })
     .forEach((v,k) => {
       let mn = v.moduleName
@@ -85,11 +91,14 @@ tap.test('Ignoring Directories without an index.js file inside PluginDirectoryPa
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
   let FoundPlugins = PluginFinder(mockedDependencies, frameworkInjector)
 
-  t.equal(FoundPlugins.length, 2, 'Should find correct number of internal plugins.')
+  t.equal(FoundPlugins.length, 3, 'Should find correct number of internal plugins.')
 
   FoundPlugins
     .filter((i) => {
       return i.moduleName !== 'ApplicationEnvironment'
+    })
+    .filter((i) => {
+      return i.moduleName !== 'AddUtilities'
     })
     .forEach((v,k) => {
       let mn = v.moduleName
@@ -109,11 +118,14 @@ tap.test('Finding external Plugins', (t) => {
   let frameworkInjector = mocks.mockFrameworkInjector(false, {pluginDirectory: false}, mockDir)
   let FoundPlugins = PluginFinder(mockedDependencies, frameworkInjector)
 
-  t.equal(FoundPlugins.length, 2, 'Should find correct number of internal plugins.')
+  t.equal(FoundPlugins.length, 3, 'Should find correct number of internal plugins.')
 
   FoundPlugins
     .filter((i) => {
       return i.moduleName !== 'ApplicationEnvironment'
+    })
+    .filter((i) => {
+      return i.moduleName !== 'AddUtilities'
     })
     .forEach((v,k) => {
       let mn = v.moduleName
@@ -134,7 +146,7 @@ tap.test('Ignoring Directories with bad paths', (t) => {
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
   frameworkInjector.get('Options').pluginDirectory = '/derp'
   let FoundPlugins = PluginFinder(mockedDependencies, frameworkInjector)
-  t.equal(FoundPlugins.length, 1, 'Should find correct number of internal plugins.')
+  t.equal(FoundPlugins.length, 2, 'Should find correct number of internal plugins.')
 
   mockedApplication.reset()
   t.end()
