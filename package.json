@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@pomegranate/framework-utils": "^0.2.2",
+    "@pomegranate/plugin-facade": "^1.0.3",
     "bluebird": "^3.5.1",
     "lodash": "^4.17.4"
   }
