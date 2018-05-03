@@ -1,6 +1,6 @@
 {
   "name": "@pomegranate/plugin-finder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Finds external, internal and system plugins for the Pomegranate Framework.",
   "main": "index.js",
   "scripts": {
