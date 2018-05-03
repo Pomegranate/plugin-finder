@@ -9,17 +9,7 @@
     chalk "^2.3.0"
     lodash "^4.17.4"
 
-"@pomegranate/framework-utils@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@pomegranate/framework-utils/-/framework-utils-0.0.1.tgz#81f1d340adef22c4e9f5218edf52e03e84ec46de"
-  dependencies:
-    bluebird "^3.5.0"
-    chalk "^2.1.0"
-    debug "^3.0.1"
-    fs-extra "^4.0.1"
-    lodash "^4.17.4"
-
-"@pomegranate/framework-utils@^0.2.1", "@pomegranate/framework-utils@^0.2.2":
+"@pomegranate/framework-utils@^0.2.1":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@pomegranate/framework-utils/-/framework-utils-0.2.2.tgz#c69885f5780214ed385a54c02f985b34b0a5e0ed"
   dependencies:
@@ -29,20 +19,6 @@
     debug "^3.0.1"
     fs-extra "^4.0.1"
     lodash "^4.17.4"
-
-"@pomegranate/plugin-facade@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@pomegranate/plugin-facade/-/plugin-facade-1.0.3.tgz#aa1c8ca2cbba679ba0e2793eb23ec7fac6a81254"
-  dependencies:
-    "@pomegranate/framework-utils" "^0.0.1"
-    bluebird "^3.5.0"
-    chalk "^2.3.0"
-    debug "^3.0.1"
-    fs-extra "^5.0.0"
-    handlebars "^4.0.11"
-    lodash "^4.17.4"
-    parent-require "^1.0.0"
-    uuid "^3.1.0"
 
 "@pomegranate/test-utils@^0.3.0":
   version "0.3.0"
@@ -724,14 +700,6 @@ fs-extra@^4.0.1:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^4.0.0"
-    universalify "^0.1.0"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -806,7 +774,7 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-handlebars@^4.0.1, handlebars@^4.0.11, handlebars@^4.0.3:
+handlebars@^4.0.1, handlebars@^4.0.3:
   version "4.0.11"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.11.tgz#630a35dfe0294bc281edae6ffc5d329fc7982dcc"
   dependencies:
@@ -1527,10 +1495,6 @@ p-locate@^2.0.0:
   dependencies:
     p-limit "^1.1.0"
 
-parent-require@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/parent-require/-/parent-require-1.0.0.tgz#746a167638083a860b0eef6732cb27ed46c32977"
-
 parse-glob@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/parse-glob/-/parse-glob-3.0.4.tgz#b2c376cfb11f35513badd173ef0bb6e3a388391c"
@@ -2225,10 +2189,6 @@ util-deprecate@~1.0.1:
 uuid@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
-
-uuid@^3.1.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
