@@ -20,7 +20,6 @@
     "docs/"
   ],
   "devDependencies": {
-    "@pomegranate/test-utils": "^0.3.0",
     "magnum-di": "^2.2.3",
     "tap": "^10.7.2"
   },
