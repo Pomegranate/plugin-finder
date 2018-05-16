@@ -159,6 +159,7 @@ tap.test('Finding Namespaced Plugins', (t) => {
     })
     .forEach((v,k) => {
       let mn = v.moduleName
+      t.equal(v.namespace, "@testNamespace", `${mn} has the correct namespace: ${v.namespace}`)
       t.ok(v.external, `${mn} is an external plugin.`)
       t.notOk(v.systemPlugin, `${mn} is not system plugin.`)
       t.notOk(v.internal, `${mn} is not an internal plugin.`)
